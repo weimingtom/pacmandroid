@@ -16,9 +16,10 @@ public class GameView extends FlxGameView implements SurfaceHolder.Callback
  public GameView(Context context, AttributeSet attrs)
  {
   super(
-   new FlxGame(320, 455, MenuState.class, context, R.class), 
-   context, 
-   attrs
+		  //new FlxGame(320, 455, MenuState.class, context, R.class),
+		  new FlxGame(320, 455, PlayState.class, context, R.class),
+		  context, 
+		  attrs
   );
   SurfaceHolder holder = getHolder();
   holder.addCallback(this);
