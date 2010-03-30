@@ -1,3 +1,4 @@
+package org.flixel;
 /*package org.flixel;
 
 import java.util.ArrayList;
