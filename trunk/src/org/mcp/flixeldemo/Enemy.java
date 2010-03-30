@@ -6,17 +6,17 @@ import android.view.*;
 
 import org.flixel.*;
 
-public class Player extends FlxSprite {
+public class Enemy extends FlxSprite {
 
-	protected static final int PLAYER_START_X = 100;
-	 protected static final int PLAYER_START_Y = 100;
+	protected static final int PLAYER_START_X = 50;
+	 protected static final int PLAYER_START_Y = 50;
 	 protected static final int PLAYER_RUN_SPEED = 80;
 	 protected static final float GRAVITY_ACCELERATION = 420;
 	 protected static final float JUMP_ACCELERATION = 200;
 	 
-	public Player() {
+	public Enemy() {
 		// TODO Auto-generated constructor stub
-		super(PLAYER_START_X, PLAYER_START_Y, R.drawable.player, true);
+		super(PLAYER_START_X, PLAYER_START_Y, R.drawable.ghost_red, true);
 
 		drag.x = PLAYER_RUN_SPEED * 8;
 		drag.y = drag.x;
