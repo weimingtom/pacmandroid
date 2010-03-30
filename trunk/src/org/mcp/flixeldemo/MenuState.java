@@ -17,12 +17,12 @@ public class MenuState extends FlxState implements TouchInterpreter {
 	 {
 	  super();
 	  //add(new FlxText(10, 10, 100, "Hello World!"));
-	  FlxText txt = new FlxText(0, (FlxG.width / 2) - 80, FlxG.width, "Flixel Tutorial Game");
+	  FlxText txt = new FlxText(0, (FlxG.width / 2) - 80, FlxG.width, "PacmanDroid");
 		txt.setFormat(null,16,0xFFFFFFFF, Align.CENTER);
 		this.add(txt);
 		
 
-		txt = new FlxText(0, FlxG.height  -24, FlxG.width, "PRESS X TO START");
+		txt = new FlxText(0, FlxG.height  -24, FlxG.width, "TOUCH THE SCREEN TO START");
 		txt.setFormat(null, 8, 0xFFFFFFFF, Align.CENTER);
 		this.add(txt);
       }

@@ -21,7 +21,8 @@ public class PlayState extends FlxState{
 		  super();
 		  //add(new FlxText(10, 10, 100, "Dentro do Jogo!"));
 		  FlxBlock ground = new FlxBlock(0, 640-16, 640, 16);
-		  ground.loadGraphic(R.drawable.tech_tiles);
+		  ground.loadGraphic(R.drawable.transparent);
+		  //ground.loadGraphic(R.drawable.tech_tiles);
 		  levelBlocks.add(this.add(ground));
 		  player = new Player();
 		  this.add(player);
@@ -29,6 +30,7 @@ public class PlayState extends FlxState{
 		  FlxG.followAdjust(0.5f, 0.0f);
 		  FlxG.followBounds(0, 0, 640, 640);
 		  FlxG.playMusic(R.raw.mode);
+
 		  
 	}
 	
@@ -50,8 +52,11 @@ public class PlayState extends FlxState{
 		else if(x > 2*FlxG.width/3){
 			key = KeyEvent.KEYCODE_DPAD_RIGHT;
 		}
-		else if(x < 2*FlxG.width/3) {
+		else if(x < 2*FlxG.width/3 && y < FlxG.height/2) {
 			key = KeyEvent.KEYCODE_DPAD_UP;
+		}
+		else if(x < 2*FlxG.width/3 && y > FlxG.height/2) {
+			key = KeyEvent.KEYCODE_DPAD_DOWN;
 		}
 		
 		switch(event.getAction()){
@@ -62,6 +67,7 @@ public class PlayState extends FlxState{
 			FlxG.keys.handleKeyUp(KeyEvent.KEYCODE_DPAD_LEFT);
 			FlxG.keys.handleKeyUp(KeyEvent.KEYCODE_DPAD_RIGHT);
 			FlxG.keys.handleKeyUp(KeyEvent.KEYCODE_DPAD_UP);
+			FlxG.keys.handleKeyUp(KeyEvent.KEYCODE_DPAD_DOWN);
 			break;
 			
 		}
