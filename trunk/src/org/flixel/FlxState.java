@@ -1,6 +1,6 @@
 package org.flixel;
 
-import org.mcp.flixeldemo.TouchInterpreter;
+import org.mcp.flixel.TouchInterpreter;
 
 import android.view.MotionEvent;
 
