@@ -1,0 +1,1 @@
+This project is for the development of an android-based pacman-style game. This game will be free for download on Android Market.
